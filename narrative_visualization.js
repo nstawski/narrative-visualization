@@ -456,6 +456,41 @@ const stepParameters = {
             sceneAnnotations[10],
         ]
     },
+    scene3: {
+        showBands: true,
+        explore: false,
+        bands: [
+            "magnitudeThreeLess",
+            "magnitudeThreeFour",
+            "magnitudeFourFive",
+            "magnitudeFiveSix",
+            "magnitudeSixSeven"
+        ],
+        caption: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening.<br/>Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.<br/>This is the breakdown of all recorded earthquakes since 1974 per magnitude.",
+        description: "",
+        annotations: [
+            sceneAnnotations[6],
+            sceneAnnotations[7],
+            sceneAnnotations[8],
+        ]
+    },
+    scene4: {
+        showBands: true,
+        explore: false,
+        bands: [
+            "magnitudeThreeLess",
+            "magnitudeThreeFour",
+            "magnitudeFourFive",
+            "magnitudeFiveSix",
+            "magnitudeSixSeven"
+        ],
+        caption: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening.<br/>Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.<br/>This is the breakdown of all recorded earthquakes since 1974 per magnitude.",
+        description: "",
+        annotations: [
+            sceneAnnotations[9],
+            sceneAnnotations[10],
+        ]
+    },
     exploreByMagnitude: {
         showBands: true,
         explore: true,
@@ -716,49 +751,49 @@ const story = [
         ]);
     },
     () => {
-        generateView("scene2");
+        generateView("scene3");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["scene2"].annotations[3],
+            stepParameters["scene3"].annotations[0],
             sceneAnnotations[11],
             sceneAnnotations[14]
         ]);
     },
     () => {
-        generateView("scene2");
+        generateView("scene3");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["scene2"].annotations[3],
-            stepParameters["scene2"].annotations[4],
+            stepParameters["scene3"].annotations[0],
+            stepParameters["scene3"].annotations[1],
             sceneAnnotations[11],
             sceneAnnotations[14]
         ]);
     },
     () => {
-        generateView("scene2");
+        generateView("scene3");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["scene2"].annotations[3],
-            stepParameters["scene2"].annotations[4],
-            stepParameters["scene2"].annotations[5],
+            stepParameters["scene3"].annotations[0],
+            stepParameters["scene3"].annotations[1],
+            stepParameters["scene3"].annotations[2],
             sceneAnnotations[11],
             sceneAnnotations[14]
         ]);
     },
     () => {
-        generateView("scene2");
+        generateView("scene4");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["scene2"].annotations[6],
+            stepParameters["scene4"].annotations[0],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("scene2");
+        generateView("scene4");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["scene2"].annotations[6],
-            stepParameters["scene2"].annotations[7],
+            stepParameters["scene4"].annotations[0],
+            stepParameters["scene4"].annotations[1],
             sceneAnnotations[11],
         ]);
     },
