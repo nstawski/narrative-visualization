@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>
+		Narrative vizualization
+	</title>
+    <link rel="stylesheet" href="narrative_visualization.css">
+	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js" integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>Fifty years of earthquakes (almost)</h1>
+    <p id="pageCaption"></p><span id="nav"></span>
+    <div onclick="progressOnClick()" className="story">
+        <svg id="visualization" width="100%" height="640px"></svg>
+    </div>
+	<script src="narrative_visualization_earthquakes_1974-2022.js"></script>
+	<script src="narrative_visualization.js"></script>
+
+    <p>The data is from USGS: <a href="https://earthquake.usgs.gov/earthquakes/search/">https://earthquake.usgs.gov/earthquakes/search/</a></p>
+</body>
+</html>
