@@ -425,7 +425,7 @@ const stepParameters = {
     step1: {
         showBands: false,
         explore: false,
-        caption: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening.<br/>Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.<br/>This are the earthquakes that happened each year in SF Bay Area since 1974.",
+        caption: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening.<br/>Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.<br/>These are the earthquakes that happened each year in SF Bay Area since 1974.",
         description: "",
         annotations: [
             sceneAnnotations[0],
