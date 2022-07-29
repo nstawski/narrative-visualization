@@ -422,7 +422,7 @@ const sceneAnnotations = [
 ]
 
 const stepParameters = {
-    step1: {
+    scene1: {
         showBands: false,
         explore: false,
         caption: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening.<br/>Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.<br/>These are the earthquakes that happened each year in SF Bay Area since 1974.",
@@ -433,7 +433,7 @@ const stepParameters = {
             sceneAnnotations[2],
         ]
     },
-    step2: {
+    scene2: {
         showBands: true,
         explore: false,
         bands: [
@@ -456,7 +456,7 @@ const stepParameters = {
             sceneAnnotations[10],
         ]
     },
-    step3: {
+    exploreByMagnitude: {
         showBands: true,
         explore: true,
         bands: [
@@ -475,7 +475,7 @@ const stepParameters = {
             sceneAnnotations[15],
         ]
     },
-    step4: {
+    exploreTotal: {
         showBands: false,
         explore: true,
         caption: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening.<br/>Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.<br/>Hover over the bands to see the total earthquake count per year.",
@@ -484,7 +484,7 @@ const stepParameters = {
             sceneAnnotations[15],
         ]
     },
-    step5: {
+    exploreSignificant: {
         showBands: true,
         explore: true,
         bands: [
@@ -540,7 +540,7 @@ const stepParameters = {
     }
 };
 
-let currentStep = "step1";
+let currentStep = "scene1";
 
 const generateView = (stepName) => {
     currentStep = stepName;
@@ -655,120 +655,120 @@ const renderAnnotation = (annotationData) => {
 
 const story = [
     () => {
-        generateView("step1");
+        generateView("scene1");
         generateButtons([true, true, true, true, true, false]);
         renderAnnotation([
             sceneAnnotations[11]
         ]);
     },
     () => {
-        generateView("step1");
+        generateView("scene1");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step1"].annotations[0],
+            stepParameters["scene1"].annotations[0],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("step1");
+        generateView("scene1");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step1"].annotations[0],
-            stepParameters["step1"].annotations[1],
+            stepParameters["scene1"].annotations[0],
+            stepParameters["scene1"].annotations[1],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("step1");
+        generateView("scene1");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step1"].annotations[0],
-            stepParameters["step1"].annotations[1],
-            stepParameters["step1"].annotations[2],
+            stepParameters["scene1"].annotations[0],
+            stepParameters["scene1"].annotations[1],
+            stepParameters["scene1"].annotations[2],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("step2");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step2"].annotations[1],
+            stepParameters["scene2"].annotations[1],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("step2");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step2"].annotations[1],
-            stepParameters["step2"].annotations[2],
+            stepParameters["scene2"].annotations[1],
+            stepParameters["scene2"].annotations[2],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("step2");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step2"].annotations[1],
-            stepParameters["step2"].annotations[2],
-            stepParameters["step2"].annotations[0],
+            stepParameters["scene2"].annotations[1],
+            stepParameters["scene2"].annotations[2],
+            stepParameters["scene2"].annotations[0],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("step2");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step2"].annotations[3],
-            sceneAnnotations[11],
-            sceneAnnotations[14]
-        ]);
-    },
-    () => {
-        generateView("step2");
-        generateButtons([true, true, true, false, false, false]);
-        renderAnnotation([
-            stepParameters["step2"].annotations[3],
-            stepParameters["step2"].annotations[4],
+            stepParameters["scene2"].annotations[3],
             sceneAnnotations[11],
             sceneAnnotations[14]
         ]);
     },
     () => {
-        generateView("step2");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step2"].annotations[3],
-            stepParameters["step2"].annotations[4],
-            stepParameters["step2"].annotations[5],
+            stepParameters["scene2"].annotations[3],
+            stepParameters["scene2"].annotations[4],
             sceneAnnotations[11],
             sceneAnnotations[14]
         ]);
     },
     () => {
-        generateView("step2");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step2"].annotations[6],
+            stepParameters["scene2"].annotations[3],
+            stepParameters["scene2"].annotations[4],
+            stepParameters["scene2"].annotations[5],
+            sceneAnnotations[11],
+            sceneAnnotations[14]
+        ]);
+    },
+    () => {
+        generateView("scene2");
+        generateButtons([true, true, true, false, false, false]);
+        renderAnnotation([
+            stepParameters["scene2"].annotations[6],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("step2");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["step2"].annotations[6],
-            stepParameters["step2"].annotations[7],
+            stepParameters["scene2"].annotations[6],
+            stepParameters["scene2"].annotations[7],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("step3");
+        generateView("exploreByMagnitude");
         generateButtons([false, false, false, false, true, true]);
         renderAnnotation([
-            // stepParameters["step3"].annotations[0],
-            // stepParameters["step3"].annotations[1],
-            // stepParameters["step3"].annotations[2],
+            // stepParameters["exploreByMagnitude"].annotations[0],
+            // stepParameters["exploreByMagnitude"].annotations[1],
+            // stepParameters["exploreByMagnitude"].annotations[2],
             sceneAnnotations[15],
         ]);
     },
@@ -794,7 +794,7 @@ const buttons = [
         description: "Total earthquakes",
         className: "explore",
         action: () => {
-            generateView("step4");
+            generateView("exploreTotal");
             renderAnnotation([sceneAnnotations[15]]);
             generateButtons([false, false, false, false, true, true]);
         },
@@ -805,7 +805,7 @@ const buttons = [
         description: "Breakdown by magnitude",
         className: "explore",
         action: () => {
-            generateView("step3");
+            generateView("exploreByMagnitude");
             renderAnnotation([sceneAnnotations[15]]);
             generateButtons([false, false, false, false, true, true]);
         },
@@ -816,8 +816,8 @@ const buttons = [
         description: "Significant (damaging) earthquakes only",
         className: "explore",
         action: () => {
-            generateView("step5");
-            renderAnnotation(stepParameters["step5"].annotations);
+            generateView("exploreSignificant");
+            renderAnnotation(stepParameters["exploreSignificant"].annotations);
             generateButtons([false, false, false, false, true, true]);
         },
         disabled: true,
@@ -870,7 +870,7 @@ const generateButtons = (buttonStates) => {
     });
 }
 
-generateView("step1");
+generateView("scene1");
 generateButtons();
 renderAnnotation([
     sceneAnnotations[11]
