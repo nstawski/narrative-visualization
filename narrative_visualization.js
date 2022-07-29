@@ -795,7 +795,7 @@ const buttons = [
         className: "explore",
         action: () => {
             generateView("step4");
-            // renderAnnotation(stepParameters["step4"].annotations);
+            renderAnnotation([sceneAnnotations[15]]);
             generateButtons([false, false, false, false, true, true]);
         },
         disabled: true,
@@ -806,7 +806,7 @@ const buttons = [
         className: "explore",
         action: () => {
             generateView("step3");
-            // renderAnnotation(stepParameters["step3"].annotations);
+            renderAnnotation([sceneAnnotations[15]]);
             generateButtons([false, false, false, false, true, true]);
         },
         disabled: true,
