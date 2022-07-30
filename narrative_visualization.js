@@ -456,41 +456,6 @@ const stepParameters = {
             sceneAnnotations[10],
         ]
     },
-    scene3: {
-        showBands: true,
-        explore: false,
-        bands: [
-            "magnitudeThreeLess",
-            "magnitudeThreeFour",
-            "magnitudeFourFive",
-            "magnitudeFiveSix",
-            "magnitudeSixSeven"
-        ],
-        caption: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening.<br/>Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.<br/>This is the breakdown of all recorded earthquakes since 1974 per magnitude.",
-        description: "",
-        annotations: [
-            sceneAnnotations[6],
-            sceneAnnotations[7],
-            sceneAnnotations[8],
-        ]
-    },
-    scene4: {
-        showBands: true,
-        explore: false,
-        bands: [
-            "magnitudeThreeLess",
-            "magnitudeThreeFour",
-            "magnitudeFourFive",
-            "magnitudeFiveSix",
-            "magnitudeSixSeven"
-        ],
-        caption: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening.<br/>Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.<br/>This is the breakdown of all recorded earthquakes since 1974 per magnitude.",
-        description: "",
-        annotations: [
-            sceneAnnotations[9],
-            sceneAnnotations[10],
-        ]
-    },
     exploreByMagnitude: {
         showBands: true,
         explore: true,
@@ -573,6 +538,12 @@ const stepParameters = {
             sceneAnnotations[15],
         ]
     }
+};
+
+const significantEarthquakesInfo = {
+    "1984": `<b>1984 Morgan Hill Earthquake (6.2)</b><br/>The 1984 Morgan Hill earthquake occurred on April 24 at 1:15 p.m.<br/>local time in the Santa Clara Valley of Northern California.<br/>The shock had a moment magnitude of 6.2<br/>and a maximum Mercalli intensity of VIII.<br/>The epicenter was located near Mount Hamilton</br>in the Diablo Range of the California Coast Ranges.`,
+    "1989": `<b>1989 Loma Prieta earthquake (6.9)</b><br/>The 1989 Loma Prieta earthquake occurred on California's Central Coast <br/>on October 17 at 5:04 p.m. local time. The shock was centered <br/>in The Forest of Nisene Marks State Park in Santa Cruz County, <br/>approximately 10 mi (16 km) northeast of Santa Cruz on a section <br/>of the San Andreas Fault System and was named for the nearby <br/>Loma Prieta Peak in the Santa Cruz Mountains.The shock was responsible <br/>for 63 deaths and 3,757 injuries. The Loma Prieta segment of the San Andreas <br/>Fault Systemhad been relatively inactive since the 1906 San Francisco earthquake <br/>(to the degree that it was designated a seismic gap) until two moderate foreshocks <br/>occurred in June 1988 and again in August 1989.`,
+    "2014": `<b>2014 South Napa earthquake</b><br/>The 2014 South Napa earthquake occurred in the North San Francisco<br/>Bay Area on August 24 at 03:20:44 Pacific Daylight Time. The event was<br/>the largest in the San Francisco Bay Area since the 1989 Loma Prieta earthquake.<br/>The epicenter of the earthquake was located to the south of Napa<br/>and to the northwest of American Canyon on the West Napa Fault.<br/><br/>Total damage in the southern Napa Valley and Vallejo areas<br/>was in the range of $362 million to $1 billion, with<br/>one person killed and 200 injured. Other aspects of the event included<br/>an experimental earthquake warning system that alerted seismologists<br/>several seconds before the damaging shear waves arrived, temporary changes<br/>in springs and wells, and the potential for postseismic fault creep.`,
 };
 
 let currentStep = "scene1";
@@ -662,13 +633,19 @@ const generateView = (stepName) => {
                 const tooltipData = d.data;
                 div.transition()
                     .duration(200)		
-                    .style("opacity", .9);		
-                div.html(`Year: ${tooltipData.year}` + 
-                (!!parameters.showBands ? `<br/>${earthquakeBandNames[bandName]}: ${bandValue}` : `<br/>Total earthquakes: ${bandValue}`) + 
-                `<br/>Max magnitude: ${tooltipData.maximumMagnitude}`
+                    .style("opacity", .9);	
+                if (!parameters.showBands || parameters.bands.length > 2) {
+                    div.html(`Year: ${tooltipData.year}` + 
+                    (!!parameters.showBands ? `<br/>${earthquakeBandNames[bandName]}: ${bandValue}` : `<br/>Total earthquakes: ${bandValue}`) + 
+                    `<br/>Max magnitude: ${tooltipData.maximumMagnitude}`
                     )
                     .style("left", mouseX + "px")		
                     .style("top", mouseY + 100 + "px");	
+                } else {
+                    div.html(`${significantEarthquakesInfo[tooltipData.year]}`)
+                    .style("left", mouseX - 50 + "px")		
+                    .style("top", mouseY + "px");	
+                }
             }
         })					
         .on("mouseout", function(event, d) {
@@ -751,49 +728,30 @@ const story = [
         ]);
     },
     () => {
-        generateView("scene3");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["scene3"].annotations[0],
+            stepParameters["scene2"].annotations[3],
+            stepParameters["scene2"].annotations[4],
+            stepParameters["scene2"].annotations[5],
             sceneAnnotations[11],
             sceneAnnotations[14]
         ]);
     },
     () => {
-        generateView("scene3");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["scene3"].annotations[0],
-            stepParameters["scene3"].annotations[1],
-            sceneAnnotations[11],
-            sceneAnnotations[14]
-        ]);
-    },
-    () => {
-        generateView("scene3");
-        generateButtons([true, true, true, false, false, false]);
-        renderAnnotation([
-            stepParameters["scene3"].annotations[0],
-            stepParameters["scene3"].annotations[1],
-            stepParameters["scene3"].annotations[2],
-            sceneAnnotations[11],
-            sceneAnnotations[14]
-        ]);
-    },
-    () => {
-        generateView("scene4");
-        generateButtons([true, true, true, false, false, false]);
-        renderAnnotation([
-            stepParameters["scene4"].annotations[0],
+            stepParameters["scene2"].annotations[6],
             sceneAnnotations[11],
         ]);
     },
     () => {
-        generateView("scene4");
+        generateView("scene2");
         generateButtons([true, true, true, false, false, false]);
         renderAnnotation([
-            stepParameters["scene4"].annotations[0],
-            stepParameters["scene4"].annotations[1],
+            stepParameters["scene2"].annotations[6],
+            stepParameters["scene2"].annotations[7],
             sceneAnnotations[11],
         ]);
     },
@@ -827,7 +785,7 @@ const buttons = [
     {
         name: "Total",
         description: "Total earthquakes",
-        className: "explore",
+        className: "exploreTotal",
         action: () => {
             generateView("exploreTotal");
             renderAnnotation([sceneAnnotations[15]]);
@@ -838,7 +796,7 @@ const buttons = [
     {
         name: "By magnitude",
         description: "Breakdown by magnitude",
-        className: "explore",
+        className: "exploreByMagnitude",
         action: () => {
             generateView("exploreByMagnitude");
             renderAnnotation([sceneAnnotations[15]]);
@@ -849,7 +807,7 @@ const buttons = [
     {
         name: "Only significant",
         description: "Significant (damaging) earthquakes only",
-        className: "explore",
+        className: "exploreSignificant",
         action: () => {
             generateView("exploreSignificant");
             renderAnnotation(stepParameters["exploreSignificant"].annotations);
@@ -899,7 +857,7 @@ const generateButtons = (buttonStates) => {
         const btn = document.createElement("button");
         btn.innerText = button.name;
         btn.onclick = button.action;
-        btn.className = button.className;
+        btn.className = `${button.className} ${currentStep === button.className ? 'active' : ''}`;
         btn.disabled = button.disabled;
         document.getElementById("nav").appendChild(btn);
     });

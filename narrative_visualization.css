@@ -28,10 +28,16 @@ button:not(:disabled) {
     background-color: #e6ffff;
     border: 1px solid #87c6b9;
 }
+
+button.active {
+    background-color: #9ad4d4;
+}
+
 button:not(:disabled):hover {
     cursor: pointer;
     box-shadow: 2px 2px 1px 0px #87c6b9;
 }
+
 .start:not(:disabled), .back:not(:disabled) {
     background-color: #ffffff;
     border: 1px solid #87c6b9;
