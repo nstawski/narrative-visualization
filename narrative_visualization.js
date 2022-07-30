@@ -185,8 +185,8 @@ const sceneAnnotations = [
         note: {
             label: "The most earthquakes we had per year was 720 in 1989. This was also when the Loma Prieta Earthquake (6.9) happened.",
             title: "1989",
-            wrap: 240,  // try something smaller to see text split in several lines
-            padding: 5   // More = text lower
+            wrap: 240,
+            padding: 5 
             
         },
         type: d3.annotationCallout,
@@ -200,8 +200,8 @@ const sceneAnnotations = [
         note: {
             label: "From 1991, the average number of detected earthquakes reduced significantly, despite no change in technology",
             title: "1991",
-            wrap: 220,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 220,
+            padding: 0
             
         },
         type: d3.annotationCallout,
@@ -215,8 +215,8 @@ const sceneAnnotations = [
         note: {
             label: "2022 doesn't have the full data, but it's on track and on trend to be below 200 earthquakes per year",
             title: "2022",
-            wrap: 220,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 220,
+            padding: 0
             
         },
         type: d3.annotationCallout,
@@ -230,8 +230,8 @@ const sceneAnnotations = [
         note: {
             label: "There is only a fraction of earthquakes that result in significant damage",
             title: "",
-            wrap: 200,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 200,
+            padding: 0
             
         },
         type: d3.annotationCallout,
@@ -245,8 +245,8 @@ const sceneAnnotations = [
         note: {
             label: "Most earthquakes that are happening are not even noticeable",
             title: "",
-            wrap: 250,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 250,
+            padding: 0
             
         },
         type: d3.annotationCallout,
@@ -260,8 +260,8 @@ const sceneAnnotations = [
         note: {
             label: "When they are noticeable, most don't result in any significant damage",
             title: "",
-            wrap: 250,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 250,
+            padding: 0
             
         },
         type: d3.annotationCallout,
@@ -275,8 +275,8 @@ const sceneAnnotations = [
         note: {
             label: "Loma Prieta Earthquake (6.9)",
             title: "1989",
-            wrap: 200,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 200,
+            padding: 0
             
         },
         type: d3.annotationCallout,
@@ -290,8 +290,8 @@ const sceneAnnotations = [
         note: {
             label: "Morgan Hill earthquake (6.2)",
             title: "1984",
-            wrap: 200,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 200,
+            padding: 0
             
         },
         type: d3.annotationCallout,
@@ -305,8 +305,8 @@ const sceneAnnotations = [
         note: {
             label: "South Napa earthquake (6.02)",
             title: "2014",
-            wrap: 200,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 200,
+            padding: 0
             
         },
         type: d3.annotationCallout,
@@ -320,8 +320,8 @@ const sceneAnnotations = [
         note: {
             label: "Before 1991 there were not only more earthquakes, they were bigger",
             title: "1974-1990",
-            wrap: 200,  // try something smaller to see text split in several lines
-            padding: 5   // More = text lower
+            wrap: 200,
+            padding: 5
             
         },
         type: d3.annotationCalloutRect,
@@ -339,8 +339,8 @@ const sceneAnnotations = [
         note: {
             label: "Looks like we entered a calmer time with lesser and less devastating earthquakes",
             title: "1991-2022",
-            wrap: 200,  // try something smaller to see text split in several lines
-            padding: 0   // More = text lower
+            wrap: 200,
+            padding: 0
             
         },
         type: d3.annotationCalloutRect,
@@ -358,7 +358,7 @@ const sceneAnnotations = [
         note: {
             label: "Click anywhere on the graph to continue forward",
             title: "",
-            wrap: 200,  // try something smaller to see text split in several lines
+            wrap: 200,
             padding: 0   
             
         },
@@ -371,7 +371,7 @@ const sceneAnnotations = [
         note: {
             label: "Earthquakes can be scary. Anyone new to SF Bay Area who has experienced an earthquake keeps worrying about the next one happening. Here is a look at the earthquake data for the past 48 years and an attempt to undestand what is going on with our seismic activity.",
             title: "",
-            wrap: 400,  // try something smaller to see text split in several lines
+            wrap: 400,
             padding: 0   
             
         },
@@ -384,7 +384,7 @@ const sceneAnnotations = [
         note: {
             label: "Click anywhere on the graph to continue forward.",
             title: "",
-            wrap: 400,  // try something smaller to see text split in several lines
+            wrap: 400,
             padding: 0   
             
         },
@@ -397,7 +397,7 @@ const sceneAnnotations = [
         note: {
             label: "Highlighted are the only earthquakes in SF Bay Area in the past 48 years that resulted in significant damage.",
             title: "",
-            wrap: 400,  // try something smaller to see text split in several lines
+            wrap: 400,
             padding: 0   
             
         },
@@ -497,8 +497,8 @@ const stepParameters = {
                 note: {
                     label: "Morgan Hill earthquake (6.2)",
                     title: "1984",
-                    wrap: 200,  // try something smaller to see text split in several lines
-                    padding: 0   // More = text lower
+                    wrap: 200,
+                    padding: 0
                     
                 },
                 color: ["#cc0000"],
@@ -511,8 +511,8 @@ const stepParameters = {
                 note: {
                     label: "Loma Prieta Earthquake (6.9)",
                     title: "1989",
-                    wrap: 200,  // try something smaller to see text split in several lines
-                    padding: 0   // More = text lower
+                    wrap: 200,
+                    padding: 0
                     
                 },
                 color: ["#cc0000"],
@@ -525,8 +525,8 @@ const stepParameters = {
                 note: {
                     label: "South Napa earthquake (6.02)",
                     title: "2014",
-                    wrap: 200,  // try something smaller to see text split in several lines
-                    padding: 0   // More = text lower
+                    wrap: 200,
+                    padding: 0
                     
                 },
                 color: ["#cc0000"],
